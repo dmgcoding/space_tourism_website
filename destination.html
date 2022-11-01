@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="app/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+  <script defer src="app/js/script.js"></script>
+
+    <title>Document</title>
+</head>
+<body class="bg_destination">
+    <div class="">
+        <div class="header">
+            <img src="assets/shared/logo.svg" alt="logo" class="logo">
+            <div class="nav_line"></div>
+            <nav class="nav">
+              <ul>
+                <li ><a href="index.html"><p class="nav_item_number">00 <span>Home</span></p></a></li>
+                <li class="selected_nav_item"><a href="destination.html"><p class="nav_item_number">01 <span>Destination</span></p></a></li>
+                <li><a href="crew.html"><p class="nav_item_number">02 <span>Crew</span></p></a></li>
+                <li><a href="technology.html"><p class="nav_item_number">03 <span>Technology</span></p></a></li>
+              </ul>
+            </nav>
+            <img src="./assets/shared/icon-hamburger.svg" alt="hame menu" class="ham_menu">
+        </div>
+        <!-- body -->
+        <div class="destination_page">
+            <div class="left_block">
+                <div class="left_block_container">
+                    <div class="subheading">
+                        01 Pick your destination
+                    </div>
+                    <img id="planet_img" src="./assets/destination/image-moon.png" alt="Moon" class="planet_img">
+                </div>
+            </div>
+            <div class="right_block">
+                <div class="container">
+                    <div class="planet_selector_list">
+                        <ul>
+                            <li id="moon" onclick="selectPlanet('moon')" class="selected_planet">Moon</li>
+                            <li id="mars" onclick="selectPlanet('mars')">Mars</li>
+                            <li id="europa" onclick="selectPlanet('europa')">Europa</li>
+                            <li id="titan" onclick="selectPlanet('titan')">Titan</li>
+                        </ul>
+                    </div>
+                    <div class="planet">
+                        <div class="planet_title">Moon</div>
+                        <div class="planet_desc">
+                            See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+  regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+                        </div>
+                        <hr size="1">
+                        <div class="planet_details_container">
+                            <div class="planet_distances">
+                               <span class="subh2 d_block">Avg. distance</span>
+                                <span class="planet_avg_dis subh1 d_block">384,400 km</span> 
+                            </div>
+                            <div class="planet_travel_times">
+                                <span class="  subh2 d_block">Est. travel time</span>
+                                <span class="planet_est_time subh1 d_block">3 days</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

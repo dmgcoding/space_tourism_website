@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="app/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <script defer src="app/js/script.js"></script>
+</head>
+<body class="bg_technology">
+    <div>
+        <div class="header">
+            <img src="assets/shared/logo.svg" alt="logo" class="logo">
+            <div class="nav_line"></div>
+            <nav class="nav">
+              <ul>
+                <li ><a href="index.html"><p class="nav_item_number">00 <span>Home</span></p></a></li>
+                <li><a href="destination.html"><p class="nav_item_number">01 <span>Destination</span></p></a></li>
+                <li><a href="crew.html"><p class="nav_item_number">02 <span>Crew</span></p></a></li>
+                <li class="selected_nav_item"><a href="technology.html"><p class="nav_item_number">03 <span>Technology</span></p></a></li>
+              </ul>
+            </nav>
+            <img src="./assets/shared/icon-hamburger.svg" alt="hame menu" class="ham_menu">
+          </div>
+          <div class="page_technology">
+            <div class="subheading"><span>03</span> Space launch 101</div>
+            <div class="page_technology_container">
+                <div class="selection">
+                    <div onclick="selectTech(0)" id="tech_select_1" class="selection_circle tech_selected">1</div>
+                    <div onclick="selectTech(1)" id="tech_select_2" class="selection_circle ">2</div>
+                    <div onclick="selectTech(2)" id="tech_select_3" class="selection_circle ">3</div>
+                </div>
+                <div class="details_container">
+                    <div class="tech_details_terminology">The terminology...</div>
+                    <div class="tech_details_name">Launch vehicle</div>
+                    <p class="tech_details_desc">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+                        payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+                        WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+                        it's quite an awe-inspiring sight on the launch pad!</p>
+                </div>
+                <div class="tech_img">
+                    <img id="tech_img" src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="terminology pic">
+                </div>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
