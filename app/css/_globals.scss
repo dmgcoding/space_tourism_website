@@ -1,0 +1,29 @@
+@import 'variables';
+
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+}
+
+*, *::before, *::after{
+    position: relative;
+    box-sizing: inherit;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.subh1{
+    font-size: $f_sh1;
+}
+
+.subh2{
+    font-size: $f_sh2;
+}
+
+.d_block{
+    display: block;
+}

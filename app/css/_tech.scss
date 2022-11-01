@@ -1,0 +1,95 @@
+@import 'variables';
+
+.bg_technology{
+    background-image: url("../../assets/technology/background-technology-desktop.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.page_technology{
+    top: 20vh;
+
+    .subheading{
+        font-size: $f_sh1;
+        color: $cream;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 30px;
+        
+        span{
+            color: $cream_hover;
+        }
+    }
+
+    .page_technology_container{
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+
+        .selection{
+            flex: 1;
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            padding-left: 90px;
+
+            .selection_circle{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                border: 1px solid $cream_hover;
+                background-color: transparent;
+                font-size: $f_h4;
+                color: $cream;
+                text-align: center;
+                vertical-align: center;
+                line-height: 80px;
+                cursor: pointer;
+                
+                &:not(:last-child){
+                    margin-bottom: 32px;
+                }
+            }
+
+            .tech_selected{
+                background-color: $cream;
+                color: $darkblue;
+            }
+        }
+
+        .details_container{
+            flex: 2;
+            order: 2;
+
+            .tech_details_terminology{
+                padding-top: 15px;
+                color: $cream_hover;
+                font-size: $f_navtext;
+                text-transform: uppercase;
+            }
+            .tech_details_name{
+                color: $cream;
+                font-size: $f_h3;
+                text-transform: uppercase;
+                padding-top: 20px;
+            }
+            .tech_details_desc{
+                margin: 0px;
+                color: $cream_hover;
+                font-size: $f_bodytext;
+                padding-top: 35px;
+                line-height: 30px;
+            }
+        }
+        .tech_img{
+            flex: 2;
+            order: 3;
+            width: 100%;
+            height: auto;
+            padding-left: 25px;
+        }
+    }
+}

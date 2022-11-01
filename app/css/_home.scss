@@ -1,0 +1,94 @@
+@import 'variables';
+
+.bg_home{
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.home_page{
+    margin: 0px;
+    position: relative;
+    top: 20vh;
+    width: 100vw;
+    display: flex;
+    
+    .left_block{
+        display: block;
+        width: 50%;
+        height: auto;
+
+        .content{
+            padding: 20px;
+            top: 100%;
+            left: 60%;
+            transform: translate(-50%,-50%);
+            color: $cream;
+            max-width: 344px;
+
+            .subheading{
+                text-transform: uppercase;
+                margin: 0;
+                font-size: $f_sh1;
+                letter-spacing: 1.5px;
+                font-weight: 400;
+            }
+
+            .heading{
+                text-transform: uppercase;
+                margin: 0;
+                font-size: $f_h1;
+            }
+
+            .details{
+                margin: 0;
+                margin-top: 15px;
+                font-size: $f_bodytext;
+                font-weight: 300;
+                letter-spacing: 0.3px;
+
+            }
+        }
+    }
+
+    .right_block{
+        display: block;
+        height: auto;
+        width: 50%;
+        color: $darkblue;
+        font-size: $f_h4;
+
+        .explore{
+            margin: 0;
+            width: 375px;
+            height: 375px;
+            top: 110%;
+            left: 55%;
+            transform: translate(-50%,-50%);
+            padding: 50px 50px;
+            background-color: transparent;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+
+
+            &:hover{
+                background-color: $cream_hover;
+            }
+        }
+        .explore2{
+            margin: 0;
+            width: 275px;
+            height: 275px;
+            background-color: $cream;
+            border: none;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 275px;
+        }
+    }
+}

@@ -1,0 +1,890 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  position: relative;
+  box-sizing: inherit;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.subh1 {
+  font-size: 28px;
+}
+
+.subh2 {
+  font-size: 14px;
+}
+
+.d_block {
+  display: block;
+}
+
+.bg_home {
+  background-image: url("../../assets/home/background-home-desktop.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.home_page {
+  margin: 0px;
+  position: relative;
+  top: 20vh;
+  width: 100vw;
+  display: flex;
+}
+.home_page .left_block {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+.home_page .left_block .content {
+  padding: 20px;
+  top: 100%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  max-width: 344px;
+}
+.home_page .left_block .content .subheading {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+.home_page .left_block .content .heading {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 150px;
+}
+.home_page .left_block .content .details {
+  margin: 0;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+.home_page .right_block {
+  display: block;
+  height: auto;
+  width: 50%;
+  color: rgb(11, 13, 23);
+  font-size: 32px;
+}
+.home_page .right_block .explore {
+  margin: 0;
+  width: 375px;
+  height: 375px;
+  top: 110%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  padding: 50px 50px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.home_page .right_block .explore:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.home_page .right_block .explore2 {
+  margin: 0;
+  width: 275px;
+  height: 275px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 275px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.header .logo {
+  margin-left: 55px;
+  margin-right: auto;
+  width: 6.4vw;
+  height: auto;
+  cursor: pointer;
+}
+.header .nav_line {
+  display: block;
+  width: auto;
+  flex: auto;
+  margin-right: -33px;
+  margin-left: 30px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.header .nav {
+  padding-left: 124px;
+  padding-right: 162px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: visible;
+}
+.header .nav ul {
+  list-style: none;
+  text-transform: uppercase;
+  background-color: greeb;
+  margin: 0px;
+  padding: 0;
+}
+.header .nav ul li {
+  display: inline-block;
+  font-size: 16px;
+  padding-top: 43px;
+  padding-bottom: 37px;
+  margin-left: 0px;
+}
+.header .nav ul li:not(:last-child) {
+  margin-right: 40px;
+}
+.header .nav ul li a {
+  text-decoration: none;
+}
+.header .nav ul li:hover::after {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -37px;
+  display: block;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.6;
+}
+.header .nav ul .selected_nav_item::after {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -37px;
+  display: block;
+  height: 3px;
+  background-color: white;
+}
+.header .nav ul .nav_item_number {
+  display: inline;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+.header .nav ul .nav_item_number span {
+  font-weight: 400;
+}
+.header .ham_menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bg_home {
+    background-image: url("../../assets/home/background-home-tablet.jpg") !important;
+    height: 100% !important;
+  }
+  .header {
+    padding-top: 0px;
+  }
+  .header .logo {
+    margin-left: 40px;
+  }
+  .header .nav_line {
+    display: none;
+  }
+  .header .nav {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .header .nav ul li:not(:last-child) {
+    margin-right: 28px;
+  }
+  .header .ham_menu {
+    display: none;
+  }
+  .home_page {
+    display: block !important;
+  }
+  .home_page .left_block {
+    width: 100% !important;
+  }
+  .home_page .left_block .content {
+    top: 0 !important;
+    left: 50% !important;
+    transform: translate(-50%) !important;
+    max-width: 450px !important;
+  }
+  .home_page .left_block .subheading {
+    text-align: center;
+  }
+  .home_page .left_block .heading {
+    text-align: center;
+  }
+  .home_page .left_block .details {
+    text-align: center;
+  }
+  .home_page .right_block {
+    width: 100% !important;
+    padding-bottom: 60px;
+  }
+  .home_page .right_block .explore {
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .bg_destination {
+    background-image: url("../../assets/destination/background-destination-tablet.jpg");
+    height: 100% !important;
+  }
+  .destination_page {
+    display: block !important;
+    top: 20vh !important;
+  }
+  .destination_page .left_block {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 !important;
+  }
+  .destination_page .left_block .left_block_container {
+    position: relative;
+    height: auto !important;
+    transform: translate(0) !important;
+  }
+  .destination_page .left_block .left_block_container .subheading {
+    padding-left: 30px;
+    padding-bottom: 20px;
+  }
+  .destination_page .left_block .left_block_container .planet_img {
+    left: 50% !important;
+    max-width: 60vw !important;
+    max-height: 60vw !important;
+    padding: 20px !important;
+  }
+  .destination_page .right_block {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 !important;
+  }
+  .destination_page .right_block .container {
+    width: auto !important;
+    left: 0;
+    transform: translate(0) !important;
+    margin: 40px !important;
+    padding-bottom: 70px;
+  }
+  .destination_page .right_block .container .planet {
+    max-width: 444px !important;
+    left: 50% !important;
+    transform: translate(-50%) !important;
+  }
+  .destination_page .right_block .container .planet .planet_title {
+    text-align: center;
+  }
+  .destination_page .right_block .container .planet .planet_desc {
+    text-align: center;
+  }
+  .destination_page .right_block .container .planet_selector_list {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .destination_page .right_block .container .planet_details_container {
+    justify-content: space-evenly !important;
+  }
+  .destination_page .right_block .container .planet_details_container .planet_distances {
+    display: block;
+    position: relative;
+    width: 50%;
+    text-align: center;
+  }
+  .destination_page .right_block .container .planet_details_container .planet_travel_times {
+    display: block;
+    position: relative;
+    width: 50%;
+    text-align: center;
+  }
+  .bg_crew {
+    background-image: url("../../assets/crew/background-crew-tablet.jpg") !important;
+  }
+  .crew_page {
+    display: block !important;
+  }
+  .crew_page .left_block {
+    width: 100% !important;
+  }
+  .crew_page .left_block .left_box {
+    padding-left: 20px !important;
+    max-width: 520px !important;
+  }
+  .crew_page .left_block .left_box .crew_details_box {
+    padding-top: 50px !important;
+    padding-bottom: 40px !important;
+  }
+  .crew_page .left_block .left_box .crew_details_box .crew_member_post {
+    text-align: center;
+  }
+  .crew_page .left_block .left_box .crew_details_box .crew_member_name {
+    text-align: center;
+  }
+  .crew_page .left_block .left_box .crew_details_box .crew_member_desc {
+    text-align: center;
+  }
+  .crew_page .left_block .left_box .crew_selection_panel {
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+  }
+  .crew_page .right_block {
+    width: 100% !important;
+  }
+  .crew_page .right_block img {
+    position: relative !important;
+    width: 45vw !important;
+    left: 50%;
+    transform: translate(-50%) !important;
+    padding-left: 0px !important;
+  }
+  .bg_technology {
+    background-image: url("../../assets/technology/background-technology-tablet.jpg") !important;
+  }
+  .page_technology {
+    top: 10vh !important;
+  }
+  .page_technology .subheading {
+    font-size: 18px !important;
+  }
+  .page_technology .page_technology_container {
+    flex-direction: column;
+    padding-top: 0px !important;
+  }
+  .page_technology .page_technology_container .selection {
+    flex: auto !important;
+    order: 2 !important;
+    flex-direction: row !important;
+    padding-left: 0px !important;
+    margin-top: 56px;
+  }
+  .page_technology .page_technology_container .selection .selection_circle {
+    margin-bottom: 0px !important;
+    margin: 10px !important;
+  }
+  .page_technology .page_technology_container .details_container {
+    flex: auto;
+    order: 3;
+    padding: 30px 30px;
+    padding-bottom: 80px;
+  }
+  .page_technology .page_technology_container .details_container .tech_details_terminology {
+    padding-top: 0px !important;
+    text-align: center;
+  }
+  .page_technology .page_technology_container .details_container .tech_details_name {
+    padding-top: 20px;
+    text-align: center;
+  }
+  .page_technology .page_technology_container .details_container .tech_details_desc {
+    padding-top: 30px !important;
+    text-align: center;
+  }
+  .page_technology .page_technology_container .tech_img {
+    flex: auto !important;
+    order: 1 !important;
+    padding-left: 0px !important;
+  }
+  .page_technology .page_technology_container .tech_img img {
+    width: 100% !important;
+  }
+}
+@media (max-width: 375px) {
+  .bg_home {
+    background-image: url("../../assets/home/background-home-mobile.jpg") !important;
+  }
+  .header {
+    padding: 24px;
+  }
+  .header .logo {
+    margin-left: 0px;
+  }
+  .header .nav_line {
+    display: none;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header .ham_menu {
+    display: block;
+  }
+  .right_block {
+    display: block;
+  }
+  .right_block .explore {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .right_block .explore2 {
+    width: 200px !important;
+    height: 200px !important;
+    line-height: 200px !important;
+  }
+  .bg_destination .planet .planet_details_container {
+    display: block !important;
+  }
+  .bg_destination .planet .planet_details_container .planet_distances {
+    width: 100% !important;
+    padding: 15px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .bg_destination .planet .planet_details_container .planet_travel_times {
+    width: 100% !important;
+    padding: 15px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .bg_crew {
+    background-image: url("../../assets/crew/background-crew-mobile.jpg") !important;
+  }
+  .bg_crew .subheading {
+    text-align: center !important;
+    font-size: 16px !important;
+  }
+  .crew_page {
+    top: 10vh !important;
+    display: flex !important;
+    flex-direction: column;
+  }
+  .crew_page .crew_page_container {
+    flex-direction: column;
+  }
+  .crew_page .left_block {
+    width: 100% !important;
+    order: 2;
+  }
+  .crew_page .left_block .left_box {
+    display: flex !important;
+    flex-direction: column;
+    max-width: 300px !important;
+    padding-left: 0px !important;
+    margin-top: 20px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .crew_page .left_block .left_box .crew_details_box {
+    order: 2;
+    padding-top: 28px !important;
+    padding-bottom: 6px !important;
+  }
+  .crew_page .left_block .left_box .crew_details_box .crew_member_post {
+    font-size: 16px !important;
+    padding-top: 0px !important;
+  }
+  .crew_page .left_block .left_box .crew_details_box .crew_member_name {
+    font-size: 28px !important;
+    padding-top: 10px !important;
+  }
+  .crew_page .left_block .left_box .crew_details_box .crew_member_desc {
+    padding-top: 10px !important;
+    margin: 0px !important;
+  }
+  .crew_page .left_block .left_box .crew_selection_panel {
+    order: 1;
+    padding-top: 20px !important;
+    padding-bottom: 0px !important;
+  }
+  .crew_page .left_block .left_box .crew_selection_panel .crew_selection_dot {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0px 4px !important;
+  }
+  .crew_page .right_block {
+    width: 100% !important;
+    order: 1;
+  }
+  .crew_page .right_block img {
+    position: relative;
+    width: 60vw !important;
+    padding-top: 40px !important;
+  }
+  .bg_technology {
+    background-image: url("../../assets/technology/background-technology-mobile.jpg") !important;
+  }
+  .page_technology {
+    top: 5vh !important;
+  }
+  .page_technology .subheading {
+    font-size: 16px !important;
+  }
+  .page_technology .page_technology_container {
+    flex-direction: column;
+    padding-top: 0px !important;
+  }
+  .page_technology .page_technology_container .selection {
+    flex: auto !important;
+    order: 2 !important;
+    flex-direction: row !important;
+    padding-left: 0px !important;
+    margin-top: 56px;
+  }
+  .page_technology .page_technology_container .selection .selection_circle {
+    margin-bottom: 0px !important;
+    margin: 10px !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 16px !important;
+    line-height: 40px !important;
+  }
+  .page_technology .page_technology_container .details_container {
+    flex: auto;
+    order: 3;
+    padding: 30px 30px !important;
+    padding-bottom: 80px;
+  }
+  .page_technology .page_technology_container .details_container .tech_details_terminology {
+    padding-top: 0px !important;
+    text-align: center;
+    font-size: 14px !important;
+  }
+  .page_technology .page_technology_container .details_container .tech_details_name {
+    padding-top: 20px !important;
+    text-align: center;
+    font-size: 28px !important;
+  }
+  .page_technology .page_technology_container .details_container .tech_details_desc {
+    padding-top: 30px !important;
+    text-align: center;
+    font-size: 16px !important;
+  }
+  .page_technology .page_technology_container .tech_img {
+    flex: auto !important;
+    order: 1 !important;
+    padding-left: 0px !important;
+  }
+  .page_technology .page_technology_container .tech_img img {
+    width: 100% !important;
+  }
+}
+.bg_destination {
+  background-image: url("../../assets/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0;
+}
+
+.destination_page {
+  top: 20vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.destination_page .left_block {
+  width: 50%;
+  height: 80vh;
+  display: block;
+  margin: 0;
+}
+.destination_page .left_block .left_block_container {
+  position: relative;
+  width: 47vw;
+  height: auto;
+  left: 0;
+  top: 0;
+  transform: translate(12%, 12%);
+}
+.destination_page .left_block .subheading {
+  padding-bottom: 0px;
+  text-transform: uppercase;
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 5px;
+}
+.destination_page .left_block .planet_img {
+  margin: 0px;
+  max-width: 42vw;
+  max-height: 42vw;
+  padding-left: 30px;
+  padding-top: 80px;
+}
+.destination_page .right_block {
+  width: 50%;
+  height: 80vh;
+  display: block;
+  margin: 0;
+}
+.destination_page .right_block .container {
+  width: 47vw;
+  height: auto;
+  transform: translate(6%, 22%);
+}
+.destination_page .right_block .container .planet_selector_list {
+  color: rgb(255, 255, 255);
+  display: block;
+  width: auto;
+  height: auto;
+}
+.destination_page .right_block .container .planet_selector_list ul {
+  list-style: none;
+  padding: 0;
+}
+.destination_page .right_block .container .planet_selector_list ul li {
+  display: inline-block;
+  padding-bottom: 23px;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.destination_page .right_block .container .planet_selector_list ul li:not(:last-child) {
+  margin-right: 23px;
+}
+.destination_page .right_block .container .planet_selector_list ul li:hover::after {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -23px;
+  display: block;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.6;
+}
+.destination_page .right_block .container .planet_selector_list ul .selected_planet:after {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -23px;
+  display: block;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+}
+.destination_page .right_block .container .planet {
+  max-width: 300px;
+  display: block;
+  color: rgb(255, 255, 255);
+}
+.destination_page .right_block .container .planet .planet_title {
+  font-size: 100px;
+  text-transform: uppercase;
+}
+.destination_page .right_block .container .planet .planet_desc {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+}
+.destination_page .right_block .container .planet hr {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.destination_page .right_block .container .planet .planet_details_container {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+.destination_page .right_block .container .planet .planet_details_container .planet_distances {
+  display: block;
+  position: relative;
+  width: 50%;
+}
+.destination_page .right_block .container .planet .planet_details_container .planet_travel_times {
+  display: block;
+  position: relative;
+  width: 50%;
+}
+
+.bg_crew {
+  background-image: url("../../assets/crew/background-crew-desktop.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+.bg_crew .subheading {
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 30px;
+}
+.bg_crew .subheading span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.crew_page {
+  top: 25vh;
+  display: block;
+}
+.crew_page .crew_page_container {
+  display: flex;
+}
+.crew_page .left_block {
+  width: 50%;
+}
+.crew_page .left_block .left_box {
+  max-width: 400px;
+  padding-left: 50px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.crew_page .left_block .left_box .crew_details_box {
+  padding-top: 80px;
+  padding-bottom: 35px;
+}
+.crew_page .left_block .left_box .crew_details_box .crew_member_post {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 32px;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+.crew_page .left_block .left_box .crew_details_box .crew_member_name {
+  color: rgb(255, 255, 255);
+  font-size: 58px;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+.crew_page .left_block .left_box .crew_details_box .crew_member_desc {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 20px;
+}
+.crew_page .left_block .left_box .crew_selection_panel {
+  display: flex;
+  padding-bottom: 70px;
+}
+.crew_page .left_block .left_box .crew_selection_panel ul {
+  padding: 0px;
+  margin: 0px;
+}
+.crew_page .left_block .left_box .crew_selection_panel .crew_selection_dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 0px 7px;
+  cursor: pointer;
+}
+.crew_page .left_block .left_box .crew_selection_panel .crew_member_selected {
+  background-color: rgb(255, 255, 255);
+}
+.crew_page .right_block {
+  width: 50%;
+}
+.crew_page .right_block img {
+  position: fixed;
+  bottom: -12px;
+  width: 45vw;
+  height: auto;
+  padding-left: 40px;
+}
+
+.bg_technology {
+  background-image: url("../../assets/technology/background-technology-desktop.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.page_technology {
+  top: 20vh;
+}
+.page_technology .subheading {
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 30px;
+}
+.page_technology .subheading span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.page_technology .page_technology_container {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+.page_technology .page_technology_container .selection {
+  flex: 1;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 90px;
+}
+.page_technology .page_technology_container .selection .selection_circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  font-size: 32px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  vertical-align: center;
+  line-height: 80px;
+  cursor: pointer;
+}
+.page_technology .page_technology_container .selection .selection_circle:not(:last-child) {
+  margin-bottom: 32px;
+}
+.page_technology .page_technology_container .selection .tech_selected {
+  background-color: rgb(255, 255, 255);
+  color: rgb(11, 13, 23);
+}
+.page_technology .page_technology_container .details_container {
+  flex: 2;
+  order: 2;
+}
+.page_technology .page_technology_container .details_container .tech_details_terminology {
+  padding-top: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.page_technology .page_technology_container .details_container .tech_details_name {
+  color: rgb(255, 255, 255);
+  font-size: 58px;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+.page_technology .page_technology_container .details_container .tech_details_desc {
+  margin: 0px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  padding-top: 35px;
+  line-height: 30px;
+}
+.page_technology .page_technology_container .tech_img {
+  flex: 2;
+  order: 3;
+  width: 100%;
+  height: auto;
+  padding-left: 25px;
+}/*# sourceMappingURL=style.css.map */

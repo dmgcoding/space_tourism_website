@@ -1,0 +1,159 @@
+@import 'variables';
+
+.bg_destination{
+    background-image: url("../../assets/destination/background-destination-desktop.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0;
+}
+
+.destination_page{
+    top: 20vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    .left_block{
+        width: 50%;
+        height: 80vh;
+        display: block;
+        margin: 0;
+
+        .left_block_container{
+            position: relative;
+            width: 47vw;
+            height: auto;
+            left: 0;
+            top: 0;
+            transform: translate(12%,12%);
+        }
+
+        .subheading{
+            padding-bottom: 0px;
+            text-transform: uppercase;
+            font-size: $f_sh1;
+            color: $cream;
+            letter-spacing: 5px;
+
+        }
+
+        .planet_img{
+            margin: 0px;
+            max-width: 42vw;
+            max-height: 42vw;
+            padding-left: 30px;
+            padding-top: 80px;
+        }
+    }
+
+    .right_block{
+        width: 50%;
+        height: 80vh;
+        display: block;
+        margin: 0;
+
+        .container{
+            width: 47vw;
+            height: auto;
+            transform: translate(6%,22%);
+
+            .planet_selector_list{
+                color: $cream;
+                display: block;
+                width: auto;
+                height: auto;
+
+                ul{
+                    list-style: none;
+                    padding: 0;
+
+                    li{
+                        display: inline-block;
+                        padding-bottom: 23px;
+                        text-transform: uppercase;
+                        font-size: $f_navtext;
+                        letter-spacing: 2px;
+                        cursor: pointer;
+                        
+                        &:not(:last-child){
+                            margin-right: 23px;
+                        }
+
+                        &:hover::after{
+                            content: "";
+                            left: 0;
+                            right: 0;
+                            bottom: -23px;
+                            display: block;
+                            height: 3px;
+                            background-color: $cream;
+                            opacity: 0.6;
+                        }
+                    }
+                    .selected_planet:after{
+                        content: "";
+                            left: 0;
+                            right: 0;
+                            bottom: -23px;
+                            display: block;
+                            height: 3px;
+                            background-color: $cream;
+                            opacity: 1;
+                    }
+                }
+            }
+
+            .planet{
+                max-width: 300px;
+                display: block;
+                color: $cream;
+
+                .planet_title{
+                    font-size: $f_h2;
+                    text-transform: uppercase;
+                }
+
+                .planet_desc{
+                    color: $cream_hover;
+                    font-size: $f_bodytext;
+                    font-weight: 300;
+                    letter-spacing: 0.3px;
+                    padding-top: 15px;
+                    padding-bottom: 40px;
+                }
+
+                hr{
+                    background-color: $cream_hover;
+                }
+
+                .planet_details_container{
+                    position: relative;
+                    display: flex;
+                    justify-content: left;
+                    align-items: flex-start;
+
+                    .planet_distances{
+                        display: block;
+                        position: relative;
+                        width: 50%;
+
+                        
+                    }
+
+                    .planet_travel_times{
+                        display: block;
+                        position: relative;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
