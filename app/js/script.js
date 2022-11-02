@@ -29,6 +29,16 @@ function onPageLoad(){
     selectTech(0);
 }
 
+function toggleMobileMenu(){
+    const elms = document.querySelectorAll(".mobile_menu_hidden");
+    const mobile_menu = document.querySelector(".mobile_menu");
+    if(elms.length == 0){//mobile menu visible
+        mobile_menu.classList.add("mobile_menu_hidden");
+    }else{
+        mobile_menu.classList.remove("mobile_menu_hidden");
+    }
+}
+
 function selectPlanet(planet){
     const selected_planet = document.querySelector(".selected_planet")
     selected_planet.classList.remove("selected_planet");

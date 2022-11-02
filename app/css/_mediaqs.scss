@@ -1,4 +1,7 @@
 @media(max-width:768px){
+    .mobile_menu{
+        visibility: hidden;
+    }
     .bg_home{
         background-image: url("../../assets/home/background-home-tablet.jpg")!important;
         height: 100%!important;
@@ -270,6 +273,9 @@
 }
 
 @media(max-width:375px){
+    .mobile_menu{
+        visibility: visible;
+    }
     .bg_home{
         background-image: url("../../assets/home/background-home-mobile.jpg")!important;
     }
